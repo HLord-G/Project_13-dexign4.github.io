@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Scroll Animations</title>
+
+    <link rel="stylesheet" href="src/style/app.css">
+
+</head>
+<body>
+    
+
+    <div class="contents">
+        <div class="main">
+            Sections 1
+        </div>
+    </div>
+    <div class="contents">
+        <div class="main">
+            Sections 2
+        </div>
+    </div>
+    <div class="contents">
+        <div class="main">
+            Sections 3
+        </div>
+    </div>
+    <div class="contents">
+        <div class="main">
+            Sections 4
+        </div>
+    </div>
+
+    
+
+</body>
+
+
+<script>
+console.clear()
+var screenWidth = screen.width;
+var screenHeight = screen.height;
+
+// top scroll animations
+// Function to handle the scroll event
+function handleScroll() {
+    console.clear()
+  // Get the current scroll position
+  var scrollPosition = Math.floor(window.scrollY);
+  
+  // Do something based on the scroll position
+  // For example, you can log the scroll position
+  console.log("Scroll Position: " + Number(scrollPosition) + "px");
+
+
+    console.log(screenWidth)
+    console.log(screenHeight)
+    console.log(`top ${document.body.offsetHeight} total height`)
+
+}
+
+// Add the scroll event listener
+window.addEventListener("scroll", handleScroll);
+
+
+
+
+// bottom scroll animations
+
+// Function to get the bottom scroll position
+function getBottomScroll() {
+  var totalScrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
+  var bottomScroll = totalScrollableHeight - window.scrollY;
+  console.log("Bottom Scroll: " + bottomScroll + "px");
+}
+
+// Example usage
+window.addEventListener("scroll", getBottomScroll);
+
+
+
+
+    
+
+
+
+
+   
+
+</script>
+</html>
